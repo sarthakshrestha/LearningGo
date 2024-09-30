@@ -31,7 +31,9 @@ func main(){
 		fmt.Printf("The result of the integer division is %v", result)
 	case remainder!=0:
 		fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
+
 	}
+
 
 	// Switch with a conditional statement
 	switch remainder{
@@ -39,6 +41,8 @@ func main(){
 		fmt.Printf("The division was exact")
 	case 1,2:
 		fmt.Printf("The division was close")
+	default:
+		fmt.Printf("The division was not close")
 	}
 }
 
