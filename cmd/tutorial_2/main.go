@@ -12,12 +12,33 @@ func main(){
 	var numerator int = 55
 	var denominator int = 9
 	var result, remainder, err = intDivision(numerator, denominator)
+
+	// If statement
 	if err!=nil{
 		fmt.Printf(err.Error())
 	} else if remainder==0{
-		fmt.Printf("The result of the integer division is %v", remainder)
+		fmt.Printf("The result of the integer division is %v", result)
 	} else {
 		fmt.Printf("The result of the integer is %v with remainder %v", result, remainder)
+	}
+
+	// Switch statement
+	// No need for Break in golang
+	switch {
+	case err!=nil:
+		fmt.Printf(err.Error())
+	case remainder==0:
+		fmt.Printf("The result of the integer division is %v", result)
+	case remainder!=0:
+		fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
+	}
+
+	// Switch with a conditional statement
+	switch remainder{
+	case 0:
+		fmt.Printf("The division was exact")
+	case 1,2:
+		fmt.Printf("The division was close")
 	}
 }
 
