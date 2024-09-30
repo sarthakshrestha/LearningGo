@@ -14,9 +14,11 @@ func main(){
 	var result, remainder, err = intDivision(numerator, denominator)
 	if err!=nil{
 		fmt.Printf(err.Error())
+	} else if remainder==0{
+		fmt.Printf("The result of the integer division is %v", remainder)
+	} else {
+		fmt.Printf("The result of the integer is %v with remainder %v", result, remainder)
 	}
-	fmt.Println(result, remainder)
-	fmt.Printf("The result of the integer is %v with remainder %v", result, remainder)
 }
 
 func printMe(printValue string){
